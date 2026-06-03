@@ -1,10 +1,9 @@
 import React from "react";
 function Header() {
   return (
-    <div>
-      <img src="../src/assets/logo.png" alt="" width={100} />
-      <button>home</button>
-      <h1>hallo</h1>
+    <div className="header">
+      <img className="header-logo" src="../src/assets/logo.png" alt="" />
+      <button className="header-button">home</button>
     </div>
   );
 }
