@@ -1,1 +1,78 @@
 @import "./theme.css";
+.reservation {
+  background-color: white;
+}
+
+.Reservation-Box {
+  margin-top: 10%;
+  margin-bottom: 4%;
+  background-color: var(--tertiary);
+  margin-inline: 30%;
+  width: 40%;
+  height: 1000px;
+  box-shadow: 0 2px 5px var(--header-shadow-color);
+  border-radius: 10px;
+}
+.Reservation-Hero-Box {
+  width: 100%;
+  height: 80%;
+}
+.Reservation-Hero {
+  width: 100%;
+}
+.Resevation-Hero-cover {
+  position: absolute;
+  height: 37%;
+  width: 100%;
+  bottom: -10%;
+  background-color: white;
+}
+.Reservation-Hero-shade {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.244);
+  box-shadow:
+    inset 400px 0 80px rgba(0, 0, 0, 0.25),
+    inset 600px 0 80px rgba(0, 0, 0, 0.25),
+    inset 800px 0 80px rgba(0, 0, 0, 0.15),
+    inset 1400px 0 100px rgba(0, 0, 0, 0.1);
+}
+.Reservation-Title {
+  background: none;
+  margin-left: 5%;
+  font-size: clamp(3.75rem, 8vw, 7.5rem);
+  font-weight: 400;
+  color: #ffffff;
+  position: absolute;
+  top: 38%;
+  font-family: Georgia, "Times New Roman", serif;
+}
+.Reservation-subtitle {
+  background: none;
+  color: #b9b9b9;
+  font-size: 1.12rem;
+  font-weight: 400;
+  position: absolute;
+  top: 60%;
+  margin-left: 5%;
+}
+.Reservation-Text-Title {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 80%;
+  background: none;
+  color: black;
+  font-size: 2rem;
+}
+.Reservation-Text {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 90%;
+  background: none;
+  color: black;
+  font-size: 1rem;
+}
