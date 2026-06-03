@@ -1,9 +1,5 @@
 import React from "react";
 function Header() {
-  return (
-    <div>
-      <h1>hello</h1>
-    </div>
-  );
+  return <h1>Hello</h1>;
 }
 export default Header;
