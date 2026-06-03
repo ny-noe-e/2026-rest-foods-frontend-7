@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #cb7c65;
+  --secondary: #fed3c7;
+  --tertiary: #efdba1;
+
+  --on-primary-container: #cb7c65;
+  --on-secondary-container: #ae887e;
+  --on-tertiary-container: #a0905c;
+  --on-error-container: #ff5449;
+
+  --surface-dim: #1a110f;
+  --surface: #1a110f;
+  --surface-bright: #4e423f;
+  --surface-container-lowest: #0d0604;
+  --surface-container-low: #251b19;
+  --surface-container: #302623;
+  --surface-container-high: #3b302d;
+  --surface-container-highest: #463b38;
+
+  --on-surface: #ffffff;
+  --on-surface-variant: #eed7d1;
+
+  --outline: #c2ada8;
+  --outline-variant: #a08c87;
+
+  --inverse-surface: #f1dfda;
+  --inverse-on-surface: #322825;
+  --inverse-primary: #743624;
+
+  --scrim: #000000;
+  --header-shadow-color: #00000089;
+
+  background: var(--primary);
+  color: var(--inverse-on-surface);
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+  background-color: var(--on-primary-container);
+}

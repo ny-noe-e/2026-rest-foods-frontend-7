@@ -1,12 +1,16 @@
 import React from "react";
-import menuHeroImage from "../assets/menuHero.png";
+import menuHeroImage from "../../assets/menuHero.png";
 
 function Menu() {
   return (
     <main className="menu-page">
       <section
         className="menu-hero"
-        style={{ "--menu-hero-image": `url(${menuHeroImage})` } as React.CSSProperties}
+        style={
+          {
+            "--menu-hero-image": `url(${menuHeroImage})`,
+          } as React.CSSProperties
+        }
         aria-labelledby="menu-title"
       >
         <div className="menu-hero-content">
