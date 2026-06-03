@@ -34,13 +34,14 @@ body {
 
   --scrim: #000000;
   --header-shadow-color: #00000089;
+}
 
+body {
   background: var(--primary);
   color: var(--inverse-on-surface);
   margin: 0;
   padding: 0;
 }
-
 div {
   margin: 0;
   padding: 0;
