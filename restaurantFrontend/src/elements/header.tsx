@@ -1,12 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-type HeaderProps = {
-  onHomeClick: () => void;
-  onMenuClick: () => void;
-};
-
-function Header({ onHomeClick, onMenuClick }: HeaderProps) {
+function Header() {
   const nav = useNavigate();
   return (
     <div className="header">
