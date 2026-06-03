@@ -15,7 +15,7 @@ function Reservation() {
           <br />
           this wil be the best solution.
         </div>
-        <div className="Reservation-Text-Title">How To reserve</div>
+        <div className="Reservation-Text-Title">How To reservate</div>
         <div className="Reservation-Text">
           just fill out the form and enjoy delicious food{" "}
         </div>
