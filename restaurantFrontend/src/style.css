@@ -250,3 +250,26 @@ div {
 .header-logo {
   height: 90%;
 }
+
+.home-page {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.home-hero {
+  padding: 64px 32px;
+  text-align: center;
+}
+
+.home-copy {
+  background: transparent;
+}
+
+.home-eyebrow {
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.home-copy h1 {
+  margin: 0;
+}
