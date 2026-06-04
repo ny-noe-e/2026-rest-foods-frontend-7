@@ -10,12 +10,12 @@
   right: 28px;
   top: 28px;
   min-height: 44px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(201, 164, 92, 0.42);
   border-radius: 999px;
   padding: 0 18px;
-  color: #fffaf5;
-  background: #743624;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+  color: var(--text-main);
+  background: rgba(24, 20, 14, 0.86);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.36);
   cursor: pointer;
   font:
     700 0.95rem/1 system-ui,
@@ -24,10 +24,11 @@
 }
 
 .page-switch:hover {
-  background: #5e2a1b;
+  background: rgba(42, 33, 19, 0.94);
+  color: var(--gold-soft);
 }
 
 .page-switch-back {
-  background: rgba(36, 21, 17, 0.82);
+  background: rgba(13, 11, 8, 0.86);
   backdrop-filter: blur(12px);
 }
