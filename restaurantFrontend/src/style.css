@@ -3,6 +3,7 @@
 @import "./style/home.css";
 @import "./style/menu.css";
 @import "./style/reservation.css";
+@import "./style/footer.css";
 
 .page-switch {
   position: fixed;

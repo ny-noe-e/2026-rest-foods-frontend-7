@@ -8,6 +8,7 @@ import { Navigate } from "react-router-dom";
 import Home from "./elements/pages/home";
 import Reservation from "./elements/pages/reservation";
 import Menu from "./elements/pages/menu";
+import Footer from "./elements/footer";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/home" element={<Home />}></Route>
         <Route path="/menu" element={<Menu />}></Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   </StrictMode>,
 );
