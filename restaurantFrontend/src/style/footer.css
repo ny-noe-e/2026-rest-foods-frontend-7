@@ -51,3 +51,8 @@
   opacity: 1;
   color: #c9a45c;
 }
+.footer:after {
+  content: "";
+  position: absolute;
+  display: none;
+}

@@ -172,3 +172,50 @@
 .Menu_Details_Animation.is_open {
   max-height: 12rem;
 }
+
+.Menu_Filter_Checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  border-color: var(--gold-soft);
+  border-style: solid;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1px;
+  position: relative;
+}
+.Menu_Filter_Checkbox:hover {
+  border-color: var(--text-muted);
+}
+.Menu_Filter_Checkbox:checked:hover {
+  border-color: var(--text-muted);
+  background-color: var(--text-muted);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.Menu_Filter_Checkbox:checked {
+  background-color: var(--gold-soft);
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 30%;
+    top: 5%;
+    width: 4px;
+    height: 9px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}
+.Menu_Filter_Container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+}

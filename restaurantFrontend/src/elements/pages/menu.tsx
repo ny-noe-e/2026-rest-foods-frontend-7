@@ -1,6 +1,7 @@
 import menuHeroImage from "../../assets/menuHero.png";
 import React from "react";
 import { MenuList } from "../objects/menuList";
+import { Filter } from "../objects/menuFilter";
 
 function Menu() {
   return (
@@ -35,6 +36,7 @@ function Menu() {
 
         <div className="menu-empty-state">
           <div className="menu-empty-copy">
+            <Filter />
             <MenuList />
           </div>
         </div>
