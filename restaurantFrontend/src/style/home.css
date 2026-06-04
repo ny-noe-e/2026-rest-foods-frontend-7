@@ -141,6 +141,79 @@
   box-shadow: 0 28px 78px rgba(0, 0, 0, 0.42);
 }
 
+.Home-Featured-Cuts {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto 112px;
+}
+
+.Home-Featured-Cuts-Header {
+  max-width: 720px;
+  margin-bottom: 32px;
+  background: none;
+}
+
+.Home-Featured-Cuts-Header h2 {
+  margin: 0;
+  color: var(--text-main);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.Home-Featured-Cuts-Header p {
+  margin: 16px 0 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.Home-Featured-Cuts-Header .Home-Philosophy-Eyebrow {
+  margin-top: 0;
+}
+
+.Home-Cuts-Grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  background: none;
+}
+
+.Home-Cut-Card {
+  overflow: hidden;
+  border: 1px solid rgba(201, 164, 92, 0.18);
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(35, 28, 18, 0.86), rgba(13, 11, 8, 0.96));
+  box-shadow: 0 28px 78px rgba(0, 0, 0, 0.3);
+}
+
+.Home-Cut-Card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(201, 164, 92, 0.16);
+}
+
+.Home-Cut-Card div {
+  padding: 24px;
+  background: none;
+}
+
+.Home-Cut-Card h3 {
+  margin: 0;
+  color: var(--gold-soft);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+
+.Home-Cut-Card p {
+  margin: 14px 0 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
 @media (max-width: 760px) {
   .Home-Philosophy {
     grid-template-columns: 1fr;
@@ -151,5 +224,14 @@
 
   .Home-Philosophy-Image {
     aspect-ratio: 16 / 11;
+  }
+
+  .Home-Featured-Cuts {
+    width: min(100% - 28px, 1120px);
+    margin-bottom: 72px;
+  }
+
+  .Home-Cuts-Grid {
+    grid-template-columns: 1fr;
   }
 }

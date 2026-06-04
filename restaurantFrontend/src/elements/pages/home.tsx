@@ -1,6 +1,9 @@
 import React from "react";
 import HeroImg from "../../assets/homeHero.png";
 import PhilosophyChefImg from "../../assets/philosophyChef.png";
+import FeaturedFiletImg from "../../assets/featuredFilet.png";
+import FeaturedRibeyeImg from "../../assets/featuredRibeye.png";
+import FeaturedTomahawkImg from "../../assets/featuredTomahawk.png";
 
 function Home() {
   return (
@@ -45,6 +48,48 @@ function Home() {
           src={PhilosophyChefImg}
           alt="Chef preparing food in the REST-Foods kitchen"
         />
+      </section>
+      <section className="Home-Featured-Cuts">
+        <div className="Home-Featured-Cuts-Header">
+          <p className="Home-Philosophy-Eyebrow">Featured cuts</p>
+          <h2>Selected from the finest parts of the cow</h2>
+          <p>
+            Three signature cuts, each chosen for a different kind of steak
+            experience.
+          </p>
+        </div>
+        <div className="Home-Cuts-Grid">
+          <article className="Home-Cut-Card">
+            <img src={FeaturedTomahawkImg} alt="Tomahawk steak cut" />
+            <div>
+              <h3>Tomahawk</h3>
+              <p>
+                A dramatic bone-in rib cut with generous marbling, built for a
+                rich flavor, deep crust, and a memorable table presentation.
+              </p>
+            </div>
+          </article>
+          <article className="Home-Cut-Card">
+            <img src={FeaturedRibeyeImg} alt="Ribeye steak cut" />
+            <div>
+              <h3>Ribeye</h3>
+              <p>
+                Cut from the rib section, the ribeye is prized for its balance
+                of tenderness and fat, giving every bite a buttery finish.
+              </p>
+            </div>
+          </article>
+          <article className="Home-Cut-Card">
+            <img src={FeaturedFiletImg} alt="Filet mignon steak cut" />
+            <div>
+              <h3>Filet Mignon</h3>
+              <p>
+                Taken from the tenderloin, filet mignon is lean, delicate, and
+                exceptionally tender for a refined steakhouse classic.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
     </div>
   );
