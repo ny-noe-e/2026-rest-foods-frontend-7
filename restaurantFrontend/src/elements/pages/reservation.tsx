@@ -10,14 +10,13 @@ function Reservation() {
         <div className="Resevation-Hero-cover"></div>
         <div className="Reservation-Title">Reservation</div>
         <div className="Reservation-subtitle">
-          for evryone that hates having no table...
+          As the Restaurant tends to be quite busy,<br />
           <br />
-          <br />
-          this wil be the best solution.
+          we recommend making a reservation in advance. 
         </div>
-        <div className="Reservation-Text-Title">How To reservate</div>
+        <div className="Reservation-Text-Title">Make your reservation in the form below.</div>
         <div className="Reservation-Text">
-          just fill out the form and enjoy delicious food{" "}
+          Form placeholder{" "}
         </div>
       </div>
       <div className="Reservation-Form"></div>

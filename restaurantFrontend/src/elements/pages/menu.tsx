@@ -14,7 +14,6 @@ function Menu() {
         aria-labelledby="menu-title"
       >
         <div className="menu-hero-content">
-          <p className="menu-eyebrow">Signature dining</p>
           <h1 className="menu-title" id="menu-title">
             Our menu
           </h1>
@@ -29,7 +28,7 @@ function Menu() {
         <div className="menu-section-header">
           <div>
             <h2 id="menu-section-title">Menu selection</h2>
-            <p>A considered selection of dishes will be shown here.</p>
+            <p>A collection of dishes, handpicked by our chef.</p>
           </div>
         </div>
 
