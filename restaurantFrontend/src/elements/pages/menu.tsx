@@ -1,4 +1,5 @@
 import menuHeroImage from "../../assets/menuHero.png";
+import React from "react";
 import { MenuList } from "../objects/menuList";
 
 function Menu() {
