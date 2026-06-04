@@ -20,6 +20,7 @@ function Reservation() {
           just fill out the form and enjoy delicious food{" "}
         </div>
       </div>
+      <div className="Reservation-Form"></div>
     </div>
   );
 }
