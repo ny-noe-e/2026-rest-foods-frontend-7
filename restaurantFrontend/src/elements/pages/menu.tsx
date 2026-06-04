@@ -1,5 +1,5 @@
-import React from "react";
 import menuHeroImage from "../../assets/menuHero.png";
+import { MenuList } from "../objects/menuList";
 
 function Menu() {
   return (
@@ -34,7 +34,7 @@ function Menu() {
 
         <div className="menu-empty-state">
           <div className="menu-empty-copy">
-            <h3>Menu coming soon</h3>
+            <MenuList />
           </div>
         </div>
       </section>

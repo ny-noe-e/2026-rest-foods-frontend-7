@@ -1,8 +1,21 @@
 import { Api } from "./Api";
+export interface MenuData {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+  chefChoice: string;
+  glutenFree: boolean;
+  lactoseFree: boolean;
+  vegan: boolean;
+  vegetarian: boolean;
+}
 
-const Menu_Api = {
-  get_menus: async function name() {
-    const menu_data = await Api.get("/menu");
-    return menu_data;
+export const Menu_Api = {
+  getMenus: async (): Promise<MenuData[]> => {
+    const menu_data = await Api.get("/menus");
+    console.log(menu_data);
+    return menu_data.data;
   },
 };
