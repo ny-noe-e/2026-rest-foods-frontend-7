@@ -54,7 +54,7 @@ export function Filter({ currfilt, setCurrfilt }: FilterProps) {
           type="checkbox"
           className="Menu_Filter_Checkbox"
           onChange={() => {
-            handleCheckboxChange("lactoseFree");
+            handleCheckboxChange("glutenFree");
           }}
         />
       </label>
