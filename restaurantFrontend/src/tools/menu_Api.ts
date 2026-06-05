@@ -18,15 +18,12 @@ export const Menu_Api = {
     currfilt,
     setCurrfilt,
   }: FilterProps): Promise<MenuData[]> => {
-    const filters =
-      "/menus?vegan=" +
-      currfilt.vegan +
-      "&vegetarian=" +
-      currfilt.vegetarian +
-      "&lactoseFree=" +
-      currfilt.lactoseFree +
-      "&glutenFree=" +
-      currfilt.glutenFree;
+    const veganParam = currfilt.vegan ? "vegan=true&" : "";
+    const vegParam = currfilt.vegetarian ? "vegetarian=true&" : "";
+    const lactose = currfilt.lactoseFree ? "lactoseFree=true&" : "";
+    const gluten = currfilt.glutenFree ? "glutenFree=true" : "";
+    const filters = "/menus?" + vegParam + veganParam + lactose + gluten;
+
     console.log(filters);
     const menu_data = await Api.get(filters);
     return menu_data.data;
