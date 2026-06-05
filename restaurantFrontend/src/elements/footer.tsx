@@ -24,7 +24,7 @@ function Footer() {
         <div className="footer_section">
           <h3 className="footer_title">Follow Us</h3>
           <a
-            href="https://youtube.com"
+            href="https://www.youtube.com/@noseryoung"
             target="_blank"
             rel="noreferrer"
             className="footer_link"

@@ -12,7 +12,7 @@ function Home() {
         <img className="Home-Hero" src={HeroImg} alt="" />
         <div className="Home-Hero-shade"></div>
         <div className="Home-Hero-cover"></div>
-        <div className="Home-Title">REST-Foods</div>
+       <div className="Home-Title">REST-Foods</div>
         <div className="Home-subtitle">
           Premium Dry-Aged Steaks.<br />
           <br />
