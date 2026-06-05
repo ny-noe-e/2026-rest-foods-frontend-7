@@ -1,6 +1,7 @@
 @import url(./theme.css);
 
 .footer {
+  height: 5rem;
   width: 100%;
   background-color: rgba(13, 11, 8, 0.9);
   border-top: 1px solid rgba(201, 164, 92, 0.28);
@@ -50,9 +51,4 @@
 .footer_link:hover {
   opacity: 1;
   color: #c9a45c;
-}
-.footer:after {
-  content: "";
-  position: absolute;
-  display: none;
 }
