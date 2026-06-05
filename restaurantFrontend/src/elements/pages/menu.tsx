@@ -1,9 +1,9 @@
 import menuHeroImage from "../../assets/menuHero.png";
-import React from "react";
+import React, { useState } from "react";
+import { Filter, type FilterState } from "../objects/menuFilter";
 import { MenuList } from "../objects/menuList";
-import { Filter } from "../objects/menuFilter";
-
 function Menu() {
+  const [currFilter, setCurrFilter] = useState<FilterState>({} as FilterState);
   return (
     <main className="menu-page">
       <section
@@ -36,8 +36,8 @@ function Menu() {
 
         <div className="menu-empty-state">
           <div className="menu-empty-copy">
-            <Filter />
-            <MenuList />
+            <Filter currfilt={currFilter} setCurrfilt={setCurrFilter} />
+            <MenuList currfilt={currFilter} setCurrfilt={setCurrFilter} />
           </div>
         </div>
       </section>

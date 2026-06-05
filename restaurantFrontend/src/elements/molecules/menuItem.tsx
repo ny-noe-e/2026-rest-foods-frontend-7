@@ -1,5 +1,5 @@
+import React from "react";
 import type { MenuData } from "../../tools/menu_Api";
-import React, { useEffect } from "react";
 
 export function Menu_Item({
   data,
@@ -10,10 +10,6 @@ export function Menu_Item({
   currExtended: number | undefined;
   setCurrExtended: React.Dispatch<React.SetStateAction<number | undefined>>;
 }) {
-  useEffect(() => {
-    console.log("printing chefChoise" + data.chefChoice);
-    console.log(data.name);
-  }, []);
   return (
     <div
       onClick={() => {
