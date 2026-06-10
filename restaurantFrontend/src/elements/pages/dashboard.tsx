@@ -3,9 +3,9 @@ import { Login } from "../objects/login";
 import { ReservationsDashBoard } from "../objects/dashboardReservations";
 export function Dashboard() {
   return (
-    <div>
+    <main className="dashboard-page">
       <Login />
       <ReservationsDashBoard />
-    </div>
+    </main>
   );
 }
