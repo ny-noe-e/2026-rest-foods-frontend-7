@@ -41,3 +41,12 @@
   appearance: none;
   outline: none;
 }
+
+.loginButton {
+  appearance: none;
+  background-color: var(--surface);
+  color: var(--gold-soft);
+  border-style: solid;
+  border-color: var(--gold-soft);
+  border-radius: 4px;
+}
