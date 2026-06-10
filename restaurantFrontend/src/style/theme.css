@@ -3,7 +3,10 @@ body {
   padding: 0;
   user-select: none;
 }
-
+::selection {
+  background-color: var(--inverse-surface);
+  color: var(--inverse-on-surface);
+}
 :root {
   --primary: #0d0b08;
   --secondary: #18140e;
