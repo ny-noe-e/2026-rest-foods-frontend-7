@@ -9,15 +9,17 @@ import Home from "./elements/pages/home";
 import Reservation from "./elements/pages/reservation";
 import Menu from "./elements/pages/menu";
 import Footer from "./elements/footer";
+import { Dashboard } from "./elements/pages/dashboard";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route path="/reservation" element={<Reservation />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/menu" element={<Menu />}></Route>
+        <Route path="/reservation" element={<Reservation />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
     </BrowserRouter>
