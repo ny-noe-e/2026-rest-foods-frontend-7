@@ -1,12 +1,11 @@
 import React from "react";
 import { Login } from "../objects/login";
+import { ReservationsDashBoard } from "../objects/dashboardReservations";
 export function Dashboard() {
   return (
     <div>
-      <div>
-        <h1> Login</h1>
-        <Login></Login>
-      </div>
+      <Login />
+      <ReservationsDashBoard />
     </div>
   );
 }

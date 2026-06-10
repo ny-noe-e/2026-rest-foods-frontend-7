@@ -1,7 +1,7 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import type { ReservationData } from "../../tools/reservation_Api";
 import { Reservation_Api } from "../../tools/reservation_Api";
-
+import React from "react";
 export function ReservationForm() {
   const [formData, setFormData] = useState<ReservationData>({
     numberOfPersons: "2",

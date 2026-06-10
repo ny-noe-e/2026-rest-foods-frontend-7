@@ -12,4 +12,7 @@ export const Reservation_Api = {
   postReservation: async (Data: ReservationData): Promise<string> => {
     return (await Api.post("/reservations", Data)).data;
   },
+  getReservations: async (): Promise<ReservationData> => {
+    return await Api.get("/reservations");
+  },
 };
