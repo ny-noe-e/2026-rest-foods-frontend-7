@@ -1,14 +1,8 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import type { ReservationData } from "../../tools/reservation_Api";
 import { Reservation_Api } from "../../tools/reservation_Api";
 
 export function ReservationForm() {
-  const [curr, setcurr] = useState<string>();
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setcurr(event.target.value);
-  };
-
   const [formData, setFormData] = useState<ReservationData>({
     numberOfPersons: "2",
     phoneNumber: "+41637323222",
@@ -19,7 +13,7 @@ export function ReservationForm() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -28,28 +22,21 @@ export function ReservationForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
     Reservation_Api.postReservation(formData);
     console.log("Submitted Reservation Data:", formData);
   };
 
   const getTableStyle = (tableNum: string) => {
-    return formData.tableId === tableNum ? { backgroundColor: "#ff1313" } : {};
+    return formData.tableId === tableNum ? { backgroundColor: "#c9a45c" } : {};
   };
   return (
-    <div>
-      <form
-        onSubmit={handleSubmit}
-        style={{
-          maxWidth: "400px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "12px",
-        }}
-      >
-        <div>
+    <div className="Reservation-Form-Card">
+      <form onSubmit={handleSubmit} className="Reservation-form-grid">
+        <div className="Reservation-form-field">
           <label htmlFor="customerName" className="reservation_label">
-            Customer Name:
+            Customer Name
           </label>
           <input
             className="Reservation-field"
@@ -62,9 +49,9 @@ export function ReservationForm() {
           />
         </div>
 
-        <div>
+        <div className="Reservation-form-field">
           <label htmlFor="phoneNumber" className="reservation_label">
-            Phone Number:
+            Phone Number
           </label>
           <input
             className="Reservation-field"
@@ -77,9 +64,9 @@ export function ReservationForm() {
           />
         </div>
 
-        <div>
+        <div className="Reservation-form-field">
           <label htmlFor="numberOfPersons" className="reservation_label">
-            Number of Persons:
+            Guests
           </label>
           <input
             className="Reservation-field"
@@ -93,9 +80,9 @@ export function ReservationForm() {
           />
         </div>
 
-        <div>
+        <div className="Reservation-form-field">
           <label htmlFor="reservedFrom" className="reservation_label">
-            Reserved From:
+            From
           </label>
           <input
             className="Reservation-field"
@@ -108,9 +95,9 @@ export function ReservationForm() {
           />
         </div>
 
-        <div>
+        <div className="Reservation-form-field">
           <label htmlFor="reservedTo" className="reservation_label">
-            Reserved To:
+            To
           </label>
           <input
             className="Reservation-field"
@@ -123,9 +110,9 @@ export function ReservationForm() {
           />
         </div>
 
-        <div>
+        <div className="Reservation-form-field">
           <label htmlFor="tableId" className="reservation_label">
-            Select Table:
+            Table
           </label>
           <select
             name="tableId"
@@ -141,23 +128,32 @@ export function ReservationForm() {
           </select>
         </div>
 
-        <button type="submit">Submit Reservation</button>
-        <hr />
-        <h3>Table Status Visualizer</h3>
-        <div style={{ display: "flex", gap: "10px" }}>
-          <div className="Reservation_Table" style={getTableStyle("T-01")}>
-            t_01
+        <div className="Reservation-table-panel">
+          <div>
+            <p className="Reservation-panel-title">Table preview</p>
+            <p className="Reservation-panel-text">
+              Selected table is highlighted.
+            </p>
           </div>
-          <div className="Reservation_Table" style={getTableStyle("T-02")}>
-            t_02
-          </div>
-          <div className="Reservation_Table" style={getTableStyle("T-03")}>
-            t_03
-          </div>
-          <div className="Reservation_Table" style={getTableStyle("T-04")}>
-            t_04
+          <div className="Reservation-table-map">
+            <div className="Reservation_Table" style={getTableStyle("T-01")}>
+              T-01
+            </div>
+            <div className="Reservation_Table" style={getTableStyle("T-02")}>
+              T-02
+            </div>
+            <div className="Reservation_Table" style={getTableStyle("T-03")}>
+              T-03
+            </div>
+            <div className="Reservation_Table" style={getTableStyle("T-04")}>
+              T-04
+            </div>
           </div>
         </div>
+
+        <button type="submit" className="Reservation-submit">
+          Submit Reservation
+        </button>
       </form>
     </div>
   );

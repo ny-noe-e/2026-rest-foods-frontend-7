@@ -7,20 +7,26 @@ function Reservation() {
       <div className="Reservation-Hero-Box">
         <img className="Reservation-Hero" src={HeroImg} alt="" />
         <div className="Reservation-Hero-shade"></div>
-        <div className="Reservation-Title">Reservation</div>
-        <div className="Reservation-subtitle">
-          As the Restaurant tends to be quite busy,
-          <br />
-          <br />
-          we recommend making a reservation in advance.
+        <div className="Reservation-Hero-Content">
+          <div className="Reservation-Title">Reservation</div>
+          <div className="Reservation-subtitle">
+            As the Restaurant tends to be quite busy, we recommend making a
+            reservation in advance.
+          </div>
         </div>
+      </div>
+      <section className="Reservation-Form-Section">
         <div className="Reservation-Text-Title">
-          Make your reservation in the form below.
+          Make your reservation
         </div>
+        <p className="Reservation-Text">
+          Choose your table, time, and party size. We will prepare the room for
+          your arrival.
+        </p>
         <div className="Reservation-Form">
           <ReservationForm />
         </div>
-      </div>
+      </section>
     </div>
   );
 }
