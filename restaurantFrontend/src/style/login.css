@@ -1,0 +1,43 @@
+@import "./theme.css";
+
+.loginBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.425);
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox {
+  background-color: var(--surface);
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  color: var(--gold-soft);
+  border-style: solid;
+  border-color: var(--gold-soft);
+  border-radius: 3px;
+}
+
+.loginPassword {
+  appearance: none;
+  background-color: var(--surface);
+  color: var(--gold-soft);
+  border-style: solid;
+  border-color: var(--gold-soft);
+  border-radius: 4px;
+}
+.loginPassword:hover {
+  border-color: var(--on-surface-variant);
+  background-color: var(--surface-bright);
+}
+.loginPassword:focus {
+  appearance: none;
+  outline: none;
+}
