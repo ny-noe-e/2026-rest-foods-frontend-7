@@ -8,7 +8,12 @@ function Footer() {
       <div className="footer_container">
         <div className="footer_section">
           <h3 className="footer_title">Where</h3>
-          <p className="footer_info">Herostrasse 312</p>
+          <a
+            href="https://maps.app.goo.gl/VF8hbb29ZrQrAgtp9"
+            className="footer_link"
+          >
+            Herostrasse 312
+          </a>
         </div>
 
         <div className="footer_section">
