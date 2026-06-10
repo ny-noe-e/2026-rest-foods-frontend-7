@@ -2,6 +2,7 @@ import { useState, type ChangeEvent, type FormEvent } from "react";
 import type { ReservationData } from "../../tools/reservation_Api";
 import { Reservation_Api } from "../../tools/reservation_Api";
 import React from "react";
+import { Verify_Reservation } from "../../tools/ReservationVerify";
 export function ReservationForm() {
   const [formData, setFormData] = useState<ReservationData>({
     numberOfPersons: "2",
@@ -22,10 +23,14 @@ export function ReservationForm() {
     }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    Reservation_Api.postReservation(formData);
-    console.log("Submitted Reservation Data:", formData);
+    if (await Verify_Reservation(formData)) {
+      Reservation_Api.postReservation(formData);
+      console.log("Submitted Reservation Data:", formData);
+    } else {
+      console.log("Failed Reservation");
+    }
   };
 
   const getTableStyle = (tableNum: string) => {
