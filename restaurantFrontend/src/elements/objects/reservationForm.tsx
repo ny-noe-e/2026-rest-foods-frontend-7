@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import type { ReservationData } from "../../tools/reservation_Api";
+import { Reservation_Api } from "../../tools/reservation_Api";
 
 export function ReservationForm() {
   const [curr, setcurr] = useState<string>();
@@ -28,7 +29,7 @@ export function ReservationForm() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    Reservation_Api.postReservation(formData);
     console.log("Submitted Reservation Data:", formData);
   };
 

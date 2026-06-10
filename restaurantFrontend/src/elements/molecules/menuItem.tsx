@@ -18,7 +18,6 @@ export function Menu_Item({
         } else {
           setCurrExtended(data.id);
         }
-        console.log("pressed");
       }}
     >
       <h1>{data?.name}</h1>
