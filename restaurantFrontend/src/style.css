@@ -5,6 +5,7 @@
 @import "./style/reservation.css";
 @import "./style/footer.css";
 @import "./style/login.css";
+@import "./style/dashboard.css";
 .page-switch {
   position: fixed;
   z-index: 20;
