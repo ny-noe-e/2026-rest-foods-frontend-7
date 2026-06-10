@@ -1,4 +1,4 @@
-import React, { StrictMode } from "react";
+import React, { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import Header from "./elements/header";
 import "./style.css";
@@ -10,6 +10,7 @@ import Reservation from "./elements/pages/reservation";
 import Menu from "./elements/pages/menu";
 import Footer from "./elements/footer";
 import { Dashboard } from "./elements/pages/dashboard";
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>

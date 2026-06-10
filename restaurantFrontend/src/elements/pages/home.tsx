@@ -6,17 +6,20 @@ import FeaturedRibeyeImg from "../../assets/featuredRibeye.png";
 import FeaturedTomahawkImg from "../../assets/featuredTomahawk.png";
 
 function Home() {
+  document.title = "Rest Foods Home";
   return (
     <div className="home">
       <div className="Home-Hero-Box">
         <img className="Home-Hero" src={HeroImg} alt="" />
         <div className="Home-Hero-shade"></div>
         <div className="Home-Hero-cover"></div>
-       <div className="Home-Title">REST-Foods</div>
+        <div className="Home-Title">REST-Foods</div>
         <div className="Home-subtitle">
-          Premium Dry-Aged Steaks.<br />
+          Premium Dry-Aged Steaks.
           <br />
-          Hand-selected cuts.<br />
+          <br />
+          Hand-selected cuts.
+          <br />
           <br />
           An unforgettable dining experience.
         </div>

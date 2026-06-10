@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Filter, type FilterState } from "../objects/menuFilter";
 import { MenuList } from "../objects/menuList";
 function Menu() {
+  document.title = "Rest Foods Menu";
   const [currFilter, setCurrFilter] = useState<FilterState>({} as FilterState);
   return (
     <main className="menu-page">
