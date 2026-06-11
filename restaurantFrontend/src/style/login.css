@@ -24,7 +24,10 @@
   border-color: var(--gold-soft);
   border-radius: 3px;
 }
-
+.loginBox.failed {
+  border-color: var(--on-error-container);
+  color: var(--on-error-container);
+}
 .loginPassword {
   appearance: none;
   background-color: var(--surface);
