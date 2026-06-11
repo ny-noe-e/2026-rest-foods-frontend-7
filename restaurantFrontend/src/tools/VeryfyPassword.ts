@@ -1,20 +1,22 @@
 import { Api } from "./Api";
 
-export function Verify_Password(password: string, userName: string): boolean {
+export async function Verify_Password(
+  password: string,
+  userName: string,
+): Promise<boolean> {
   const payload = {
     username: userName,
     Password: password,
   };
   console.log(payload);
-  Api.post("/JWTGen", payload)
-    .then((response) => {
-      console.log("Token received:", response.data);
-      localStorage.setItem("JWT", response.data);
-      return true;
-    })
-    .catch((error) => {
-      console.error("Authentication failed:", error);
-      return false;
-    });
-  return true;
+  try {
+    const response = await Api.post("/JWTGen", payload);
+
+    console.log("Token received:", response.data);
+    localStorage.setItem("JWT", response.data);
+    return true;
+  } catch (error) {
+    console.error("Authentication failed:", error);
+    return false;
+  }
 }
