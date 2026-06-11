@@ -1,22 +1,28 @@
-import React, { use } from "react";
+import React from "react";
 import { Login } from "../objects/login";
 import { ReservationsDashBoard } from "../objects/dashboardReservations";
-import { useNavigate } from "react-router-dom";
+
 export function Dashboard() {
   document.title = "Rest Foods Dashboard";
   return (
     <main className="dashboard-page">
       <Login />
-      <button
-        onClick={() => {
-          localStorage.removeItem("JWT");
-          localStorage.removeItem("login");
-          window.location.href = "/";
-          console.log("goTohome");
-        }}
-      >
-        sign out
-      </button>
+      <div className="dashboard-shell">
+        <div className="dashboard-toolbar" aria-label="Dashboard actions">
+          <p className="dashboard-toolbar__label">Staff dashboard</p>
+          <button
+            type="button"
+            className="dashboard-action dashboard-action--secondary"
+            onClick={() => {
+              localStorage.removeItem("JWT");
+              localStorage.removeItem("login");
+              window.location.href = "/";
+            }}
+          >
+            Sign out
+          </button>
+        </div>
+      </div>
       <ReservationsDashBoard />
     </main>
   );

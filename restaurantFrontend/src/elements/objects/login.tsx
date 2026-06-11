@@ -1,4 +1,4 @@
-import React, { useState, type FormEvent } from "react";
+import React, { useState } from "react";
 import { Verify_Password } from "../../tools/VeryfyPassword";
 
 export function Login() {
