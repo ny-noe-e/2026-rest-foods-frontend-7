@@ -24,6 +24,7 @@
   border-color: var(--gold-soft);
   border-radius: 3px;
 }
+
 .loginBox.failed {
   border-color: var(--on-error-container);
   color: var(--on-error-container);
@@ -52,4 +53,10 @@
   border-style: solid;
   border-color: var(--gold-soft);
   border-radius: 4px;
+}
+
+.loginFieldType {
+  top: 0;
+  gap: 6rem;
+  display: flex;
 }

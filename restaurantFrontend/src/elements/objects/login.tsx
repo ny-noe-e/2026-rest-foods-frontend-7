@@ -36,12 +36,18 @@ export function Login() {
       <div className="loginBackground">
         <div className="loginBox ">
           <h1>login</h1>
+          <div className="loginFieldType">
+            <h3>username </h3>
+            <h3>password</h3>
+          </div>
+
           <input
             id="username"
             className="loginPassword"
             value={userName}
             onChange={(e) => setSetuserName(e.target.value)}
           />
+
           <input
             type="password"
             id="password"
