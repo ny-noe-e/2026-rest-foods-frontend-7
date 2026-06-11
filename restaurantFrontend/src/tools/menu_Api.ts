@@ -14,10 +14,7 @@ export interface MenuData {
 }
 
 export const Menu_Api = {
-  getMenus: async ({
-    currfilt,
-    setCurrfilt,
-  }: FilterProps): Promise<MenuData[]> => {
+  getMenus: async ({ currfilt }: FilterProps): Promise<MenuData[]> => {
     const veganParam = currfilt.vegan ? "vegan=true&" : "";
     const vegParam = currfilt.vegetarian ? "vegetarian=true&" : "";
     const lactose = currfilt.lactoseFree ? "lactoseFree=true&" : "";

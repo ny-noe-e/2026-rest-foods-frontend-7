@@ -22,9 +22,11 @@ export function ReservationsDashBoard() {
   const [reservationData, setReservationData] = useState<ReservationData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
-  const [reloade, triggerRelode] = useState("");
+  const [reloadCount, setReloadCount] = useState(0);
   useEffect(() => {
     const getData = async () => {
+      setIsLoading(true);
+      setErrorMessage("");
       try {
         const data = await Reservation_Api.getReservations();
         setReservationData(data.data);
@@ -36,7 +38,7 @@ export function ReservationsDashBoard() {
     };
 
     getData();
-  }, [reloade]);
+  }, [reloadCount]);
 
   return (
     <section
@@ -48,16 +50,20 @@ export function ReservationsDashBoard() {
           <p className="dashboard-reservations__eyebrow">Reservations</p>
           <h1 id="reservations-title">Existing reservations</h1>
         </div>
-        <button
-          onClick={() => {
-            triggerRelode("relode");
-          }}
-        >
-          Relode
-        </button>
-        <span className="dashboard-reservations__count">
-          {reservationData.length} total
-        </span>
+        <div className="dashboard-reservations__controls">
+          <button
+            type="button"
+            className="dashboard-action dashboard-action--primary"
+            onClick={() => {
+              setReloadCount((count) => count + 1);
+            }}
+          >
+            Reload
+          </button>
+          <span className="dashboard-reservations__count">
+            {reservationData.length} total
+          </span>
+        </div>
       </div>
 
       {isLoading && (

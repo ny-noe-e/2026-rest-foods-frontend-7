@@ -23,6 +23,7 @@ export function Filter({ currfilt, setCurrfilt }: FilterProps) {
         <input
           type="checkbox"
           className="Menu_Filter_Checkbox"
+          checked={currfilt.vegan}
           onChange={() => {
             handleCheckboxChange("vegan");
           }}
@@ -33,6 +34,7 @@ export function Filter({ currfilt, setCurrfilt }: FilterProps) {
         <input
           type="checkbox"
           className="Menu_Filter_Checkbox"
+          checked={currfilt.vegetarian}
           onChange={() => {
             handleCheckboxChange("vegetarian");
           }}
@@ -43,6 +45,7 @@ export function Filter({ currfilt, setCurrfilt }: FilterProps) {
         <input
           type="checkbox"
           className="Menu_Filter_Checkbox"
+          checked={currfilt.lactoseFree}
           onChange={() => {
             handleCheckboxChange("lactoseFree");
           }}
@@ -53,6 +56,7 @@ export function Filter({ currfilt, setCurrfilt }: FilterProps) {
         <input
           type="checkbox"
           className="Menu_Filter_Checkbox"
+          checked={currfilt.glutenFree}
           onChange={() => {
             handleCheckboxChange("glutenFree");
           }}
