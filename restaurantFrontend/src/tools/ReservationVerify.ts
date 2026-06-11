@@ -3,7 +3,7 @@ import type { ReservationData } from "./reservation_Api";
 export async function Verify_Reservation(
   checkData: ReservationData,
 ): Promise<boolean> {
-  const data = (await Reservation_Api.getReservations()).data;
+  const data = (await Reservation_Api.getNonPrivateReservations()).data;
   const is_Free = data.some((data) => {
     if (checkData.tableId !== data.tableId) {
       return false;

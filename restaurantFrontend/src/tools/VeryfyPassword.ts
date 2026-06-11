@@ -9,10 +9,12 @@ export function Verify_Password(password: string, userName: string): boolean {
   Api.post("/JWTGen", payload)
     .then((response) => {
       console.log("Token received:", response.data);
+      localStorage.setItem("JWT", response.data);
       return true;
     })
     .catch((error) => {
       console.error("Authentication failed:", error);
+      return false;
     });
-  return false;
+  return true;
 }
