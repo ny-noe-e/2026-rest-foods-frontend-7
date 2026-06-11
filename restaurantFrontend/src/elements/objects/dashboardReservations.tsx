@@ -22,7 +22,7 @@ export function ReservationsDashBoard() {
   const [reservationData, setReservationData] = useState<ReservationData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
-
+  const [reloade, triggerRelode] = useState("");
   useEffect(() => {
     const getData = async () => {
       try {
@@ -36,22 +36,34 @@ export function ReservationsDashBoard() {
     };
 
     getData();
-  }, []);
+  }, [reloade]);
 
   return (
-    <section className="dashboard-reservations" aria-labelledby="reservations-title">
+    <section
+      className="dashboard-reservations"
+      aria-labelledby="reservations-title"
+    >
       <div className="dashboard-reservations__header">
         <div>
           <p className="dashboard-reservations__eyebrow">Reservations</p>
           <h1 id="reservations-title">Existing reservations</h1>
         </div>
+        <button
+          onClick={() => {
+            triggerRelode("relode");
+          }}
+        >
+          Relode
+        </button>
         <span className="dashboard-reservations__count">
           {reservationData.length} total
         </span>
       </div>
 
       {isLoading && (
-        <p className="dashboard-reservations__status">Loading reservations...</p>
+        <p className="dashboard-reservations__status">
+          Loading reservations...
+        </p>
       )}
 
       {!isLoading && errorMessage && (
@@ -82,15 +94,22 @@ export function ReservationsDashBoard() {
                 <tr
                   key={`${data.customerName}-${data.reservedFrom}-${data.tableId}-${index}`}
                 >
-                  <td data-label="Guest" className="dashboard-reservations__guest">
+                  <td
+                    data-label="Guest"
+                    className="dashboard-reservations__guest"
+                  >
                     {data.customerName}
                   </td>
                   <td data-label="People">{data.numberOfPersons}</td>
                   <td data-label="Phone">
                     <a href={`tel:${data.phoneNumber}`}>{data.phoneNumber}</a>
                   </td>
-                  <td data-label="Reserved from">{formatDateTime(data.reservedFrom)}</td>
-                  <td data-label="Reserved to">{formatDateTime(data.reservedTo)}</td>
+                  <td data-label="Reserved from">
+                    {formatDateTime(data.reservedFrom)}
+                  </td>
+                  <td data-label="Reserved to">
+                    {formatDateTime(data.reservedTo)}
+                  </td>
                   <td data-label="Table">
                     <span className="dashboard-reservations__table-id">
                       {data.tableId}

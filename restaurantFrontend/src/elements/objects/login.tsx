@@ -1,19 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Verify_Password } from "../../tools/VeryfyPassword";
-//TODO add feedback if Wrong password got input
+
 export function Login() {
   const [password, setPassword] = useState<string>("");
   const [userName, setSetuserName] = useState<string>("");
-  const [isLoggedIn, setIsLoggedIn] = useState(() => {
-    return localStorage.getItem("login") === "true";
-  });
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(
+    localStorage.getItem("login") == "true",
+  );
+  if (isLoggedIn == false) {
+    localStorage.removeItem("JWT");
+    localStorage.setItem("login", "false");
+  }
   const handlePassword = (): any => {
     if (Verify_Password(password, userName)) {
       setIsLoggedIn(true);
       localStorage.setItem("login", "true");
     } else {
       setIsLoggedIn(false);
+      localStorage.removeItem("JWT");
       localStorage.setItem("login", "false");
+      alert("invalide password / username");
     }
   };
   if (isLoggedIn) {
